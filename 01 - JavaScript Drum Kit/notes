@@ -1,0 +1,52 @@
+rich@richmbp21 sounds % for w in `ls -1`; do echo $w; vlc --play-and-exit -I dummy $w; echo; done
+boom.wav
+VLC media player 3.0.16 Vetinari (revision 3.0.16-0-g5e70837d8d)
+[0000000142608570] dummy interface: using the dummy interface module...
+[0000000144004d40] main playlist: end of playlist, exiting
+
+clap.wav
+VLC media player 3.0.16 Vetinari (revision 3.0.16-0-g5e70837d8d)
+[0000000141e07080] dummy interface: using the dummy interface module...
+[0000000141e04d30] main playlist: end of playlist, exiting
+
+hihat.wav
+VLC media player 3.0.16 Vetinari (revision 3.0.16-0-g5e70837d8d)
+[0000000158f09080] dummy interface: using the dummy interface module...
+[0000000158e067b0] main playlist: end of playlist, exiting
+
+kick.wav
+VLC media player 3.0.16 Vetinari (revision 3.0.16-0-g5e70837d8d)
+[000000011df05ee0] dummy interface: using the dummy interface module...
+[000000011de08d00] main playlist: end of playlist, exiting
+
+openhat.wav
+VLC media player 3.0.16 Vetinari (revision 3.0.16-0-g5e70837d8d)
+[000000015c105330] dummy interface: using the dummy interface module...
+[000000015a705910] main playlist: end of playlist, exiting
+
+ride.wav
+VLC media player 3.0.16 Vetinari (revision 3.0.16-0-g5e70837d8d)
+[0000000150805870] dummy interface: using the dummy interface module...
+[000000013fe05080] main playlist: end of playlist, exiting
+
+snare.wav
+VLC media player 3.0.16 Vetinari (revision 3.0.16-0-g5e70837d8d)
+[0000000159808f60] dummy interface: using the dummy interface module...
+[0000000158706c30] main playlist: end of playlist, exiting
+
+tink.wav
+VLC media player 3.0.16 Vetinari (revision 3.0.16-0-g5e70837d8d)
+[000000012e008540] dummy interface: using the dummy interface module...
+[000000011ce04d30] main playlist: end of playlist, exiting
+
+tom.wav
+VLC media player 3.0.16 Vetinari (revision 3.0.16-0-g5e70837d8d)
+[0000000139606980] dummy interface: using the dummy interface module...
+[000000013a104d40] main playlist: end of playlist, exiting
+
+rich@richmbp21 sounds %
+
+-------------------------------------------------------------------------------
+this is pretty cool, for keycodes
+redirects from keycode.info
+https://www.toptal.com/developers/keycode
