@@ -50,3 +50,62 @@ rich@richmbp21 sounds %
 this is pretty cool, for keycodes
 redirects from keycode.info
 https://www.toptal.com/developers/keycode
+
+-------------------------------------------------------------------------------
+how can I get VSCode to complete the possible event listeners, like is shown around 04:12 in the video?
+
+someone else asked the same question:
+https://stackoverflow.com/questions/75058073/which-vs-code-extension-allows-the-user-to-get-auto-create-for-function-paramete
+
+first, I tried this, inspired by https://www.youtube.com/watch?v=4VinsIZ_XjA
+Settings -> Settings -> User -> Extensions -> Emmet -> Include Languages -> Add Item
+Item: javascript
+Value: javascriptreact
+
+If you click "Edit in settings.json", you've added this:
+```
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    }
+```
+
+The videos suggestion is to have the following:
+```
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "emmet.triggerExpansionOnTab": true
+```
+
+The help when mousing over the triggerExpansionOnTab key is as follows:
+> When enabled, Emmet abbreviations are expanded when pressing TAB, even when
+> completions do not show up. When disabled, completions that show up can still
+> be accepted by pressing TAB.
+
+For more details, see https://code.visualstudio.com/docs/editor/emmet#_using-tab-for-emmet-expansions
+I think I'm going to **not** specify that
+
+From looking at
+https://code.visualstudio.com/docs/languages/identifiers , it looks
+like another valid value is as follows, if you're not using React:
+```
+    "emmet.includeLanguages": {
+        "javascript": "javascript"
+    }
+```
+
+... hmmm, I'm not sure if this is actually working after all
+
+I'm not sure why the answer there (installing JavaScript ES6 code snippets) is relevant, I don't see anything there about events.
+https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets
+
+and I tried installing it, and I still don't get exactly the output the video does
+
+and from looking at the author of the video:
+https://www.youtube.com/results?search_query=wesbos+vscode+extensions
+
+it seems to me that he's just recommending ESLint and Prettier
+
+For future possible reference:
+https://towardsthecloud.com/best-vscode-extensions-javascript
+
