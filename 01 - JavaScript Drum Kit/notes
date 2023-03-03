@@ -109,3 +109,16 @@ it seems to me that he's just recommending ESLint and Prettier
 For future possible reference:
 https://towardsthecloud.com/best-vscode-extensions-javascript
 
+-------------------------------------------------------------------------------
+for all of his lessons:
+
+https://www.youtube.com/playlist?list=PLu8EoSxDXHP6CGK4YVJhL_VWetA865GOH
+
+He actually lists what he uses, and I can't figure out what could be relevant:
+
+Although he notes the list is changing, and it was right around when he switched from Sublime Text, so maybe the videos aren't VSCode. Or maybe I need to configure things.
+
+https://wesbos.com/contact
+https://wesbos.com/uses
+https://github.com/wesbos/dotfiles/blob/master/vs-code-extensions-i-use.md
+https://github.com/wesbos/eslint-config-wesbos
