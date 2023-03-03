@@ -26,11 +26,13 @@
     ];
 
     // Some and Every Checks
+    function getCurrentYear() { return (new Date()).getFullYear(); }
+
     // Array.prototype.some() // is at least one person 19 or older?
-    const someCheck = people.some((person) => 2023 - person.year >= 19);
+    const someCheck = people.some((person) => getCurrentYear() - person.year >= 19);
     console.log(`someCheck = ${someCheck}`);
     // Array.prototype.every() // is everyone 19 or older?
-    const everyCheck = people.every((person) => 2023 - person.year >= 19);
+    const everyCheck = people.every((person) => getCurrentYear() - person.year >= 19);
     console.log(`everyCheck = ${everyCheck}`);
 
     // Array.prototype.find()
@@ -44,7 +46,10 @@
     // Find the comment with this ID
     // delete the comment with the ID of 823423
     const foundIndex = comments.findIndex((comment => comment.id == 823423));
-    delete comments[foundIndex];
+    // this leaves sort of a hole at index 1 (indices are 0,2,3,4)
+    // delete comments[foundIndex];
+    // this results in a continuous final index ordering (indices are 0,1,2,3)
+    comments.splice(foundIndex, 1);
     console.table(comments);
 
   </script>
