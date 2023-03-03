@@ -39,19 +39,19 @@
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
     const solution1 = inventors.filter(inventor => inventor.year >= 1500 && inventor.year < 1600);
-    console.log(solution1);
+    console.table(solution1);
 
     // Array.prototype.map()
     // 2. Give us an array of the inventors first and last names
     // XXX why can't I get this to be an object
     // const solution2 = inventors.map(inventor => {first: inventor.first, last: inventor.last} );
-    const solution2 = inventors.map(inventor => [inventor.first, inventor.last] );
+    const solution2 = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
     console.log(solution2);
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
     const solution3 = inventors.sort((inventorA, inventorB) => inventorA.year - inventorB.year);
-    console.log(solution3);
+    console.table(solution3);
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live all together?
@@ -60,18 +60,42 @@
 
     // 5. Sort the inventors by years lived
     const solution5 = inventors.sort((inventorA, inventorB) => (inventorA.passed - inventorA.year) - (inventorB.passed - inventorB.year));
-    console.log(solution5);
+    console.table(solution5);
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
-
+    // XXX but this page isn't loaded here, this can't actually run here
+    if (false) {
+      const category = document.querySelector('.mw-category-columns');
+      const links = category.querySelectorAll('a');
+      const linksArray = Array.from(links);
+      const deLinks = linksArray.filter(link => link.innerText.includes("de"));
+      const deText = deLinks.map(link => link.innerText);
+    }
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
+    function getLastName(lastCommaFirst) {
+      return lastCommaFirst.split(', ')[0];
+    }
+    const solution7 = people.sort((a, b) => getLastName(a) < getLastName(b) ? -1 : 1);
+    console.log(solution7);
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+    const solution8 = data.reduce((transportCounts, transport) => {
+      //console.log(transport);
+      //console.log(transportCounts);
+      if (transport in transportCounts) {
+        transportCounts[transport] += 1;
+      } else {
+        transportCounts[transport] = 1;
+      }
+      //console.log(transportCounts);
+      return transportCounts;
+    }, {});
+    console.log(solution8);
 
   </script>
 </body>
